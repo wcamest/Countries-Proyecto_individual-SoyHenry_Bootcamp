@@ -1,0 +1,36 @@
+.App{
+  width: 100%;
+  height: 100%;
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.world_map_background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("./imgs/world-map.svg");
+  background-size: 3000px auto;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1000px) {
+  @keyframes background_animation{
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: -3000px;
+    }
+  }
+
+  .world_map_background{
+    background-position-y: 0px;
+    background-repeat: repeat-x;
+    animation-name: background_animation;
+    animation-duration: 90s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}

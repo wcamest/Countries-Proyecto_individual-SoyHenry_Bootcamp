@@ -1,0 +1,149 @@
+@keyframes country_flag_start_animation {
+  from {
+    width: 0px;
+    height: 0px;
+    border: 0 solid whitesmoke;
+  }
+
+  to {
+    width: 140px;
+    height: 140px;
+    border: 20px solid whitesmoke;
+  }
+}
+
+@keyframes country_info_start_animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.country_card {
+  position: relative;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country_card:hover .country_flag {
+  width: 160px;
+  height: 160px;
+  background-size: 80%;
+  transition: background-size 0.3s, width 0.3s, height 0.3s;
+}
+
+.country_flag_outer {
+  width: max-content;
+  height: max-content;
+
+  border: 1px solid dimgray;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.country_flag {
+  width: 140px;
+  height: 140px;
+  background-color: rgb(209, 209, 209);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+  border: 20px solid whitesmoke;
+  transition: background-size 0.3s, width 0.3s, height 0.3s;
+
+  animation-name: country_flag_start_animation;
+  animation-duration: 0.5s;
+}
+
+.card_info span {
+  width: 150px;
+  max-width: 150px;
+  text-align: center;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  top: -30px;
+
+  background-color: white;
+  padding: 5px;
+  border: 1px solid dimgray;
+  border-radius: 10px;
+  font-size: 13px;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  animation-name: country_info_start_animation;
+  animation-duration: 0.5s;
+}
+
+.country_name {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.country_population {
+  font-size: 10px;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: dimgray;
+}
+
+.nav_link:hover .country_name {
+  color: blue;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  @keyframes country_flag_start_animation {
+    from {
+      width: 0px;
+      height: 0px;
+      border: 0 solid whitesmoke;
+    }
+
+    to {
+      width: 80px;
+      height: 80px;
+      border: 15px solid whitesmoke;
+    }
+  }
+
+  @keyframes country_info_start_animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .country_flag {
+    width: 80px;
+    height: 80px;
+    border: 15px solid whitesmoke;
+  }
+
+  .country_card:hover .country_flag {
+    width: 100px;
+    height: 100px;
+    background-size: 80%;
+    transition: background-size 0.3s, width 0.3s, height 0.3s;
+  }
+}

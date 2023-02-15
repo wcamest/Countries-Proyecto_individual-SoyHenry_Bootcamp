@@ -1,0 +1,33 @@
+.country_cards_container{
+    width: max-content;
+    height: max-content;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 210px);
+    grid-template-rows: repeat(3, 220px);
+}
+
+.country_cards_container > *{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.country_cards_container:has(*:hover) > *:not(:hover){
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.no_countries_info{
+    font-size: 30px;
+    color: dimgray;
+}
+
+@media only screen and (max-width: 1000px) {
+    .country_cards_container{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(5, 150px);
+
+        margin: 20px 0;
+    }
+}

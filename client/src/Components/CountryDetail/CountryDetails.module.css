@@ -1,0 +1,235 @@
+.country_details {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "nav-bar-area nav-bar-area"
+        "country-details activities";
+}
+
+.nav_bar_area {
+    grid-area: nav-bar-area;
+    width: 100%;
+    height: 100%;
+}
+
+.country_details_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: country-details;
+    padding: 50px;
+}
+
+.country_activities_area {
+    grid-area: activities;
+    padding: 30px;
+}
+
+.country_activities_area>fieldset {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+
+.country_activities_area>fieldset>legend {
+    background-color: gainsboro;
+    border: 1px solid dimgray;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: dimgray;
+    font-weight: bold;
+}
+
+.country_details_card {
+    position: relative;
+    width: 100%;
+}
+
+.country_details_header {
+    position: absolute;
+    width: max-content;
+    margin-left: 30px;
+}
+
+.country_flag_outer {
+    width: max-content;
+    height: max-content;
+
+    position: relative;
+    border: 1px solid dimgray;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.country_flag {
+    width: 100px;
+    height: 100px;
+
+    background-color: rgb(209, 209, 209);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 50%;
+    border: 20px solid whitesmoke;
+}
+
+.country_name {
+    position: absolute;
+    top: 35%;
+    left: 90%;
+    background-color: silver;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px solid rgb(71, 71, 71);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: max-content;
+}
+
+.country_details_body {
+    width: 100%;
+    height: max-content;
+    padding-bottom: 50px;
+    background-color: rgb(235, 235, 235);
+    margin-top: 70px;
+    border-radius: 10px;
+    border: 1px solid dimgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.detailed_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+}
+
+.detailed_info>li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: silver;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid dimgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 20px 15px 0;
+}
+
+.detailed_info>li>span {
+    width: max-content;
+}
+
+.country_info_name {
+    font-weight: bold;
+    color: dimgray;
+}
+
+.country_info_value {
+    background-color: whitesmoke;
+    padding: 5px 20px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid dimgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+.country_details_label {
+    position: absolute;
+    display: block;
+    margin-top: 40px;
+    margin-left: 160px;
+    color: rgb(161, 161, 161);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.country_activities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.scrollable_div {
+    width: 100%;
+    max-height: 750px;
+    min-height: 100%;
+    overflow: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .country_details {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr;
+        grid-template-areas: "nav-bar-area"
+            "country-details"
+            "activities";
+    }
+
+    .country_flag {
+        width: 80px;
+        height: 80px;
+
+        border: 15px solid whitesmoke;
+    }
+
+    .country_details_header {
+        margin-left: 15px;
+    }
+
+    .country_name {
+        left: 95%;
+        font-size: 15px;
+        max-width: 130px;
+    }
+
+    .country_details_area {
+        padding: 25px;
+    }
+
+    .country_info_value {
+        max-width: 180px;
+    }
+
+    .detailed_info>li {
+        margin: 5px 5px;
+        font-size: 12px;
+    }
+
+    .country_details_label{
+        display: none;
+    }
+
+    .scrollable_div {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}

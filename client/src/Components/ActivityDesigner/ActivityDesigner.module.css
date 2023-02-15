@@ -1,0 +1,187 @@
+.activity_designer {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.activity_designer>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.activity_designer input[type="range"] {
+    width: 100%;
+}
+
+.activity_designer input[type="text"],
+.activity_designer select {
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*#region activity designer form*/
+.form_title {
+    background-color: gainsboro;
+    border: 1px solid dimgray;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: dimgray;
+    font-weight: bold;
+}
+
+.activity_designer_form {
+    width: max-content;
+
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.activity_designer_form fieldset {
+    border: 1px solid silver;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    padding: 5px 15px 15px;
+    margin-top: 5px;
+}
+
+.activity_designer_form>fieldset {
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+/*#endregion*/
+
+
+.activity_season {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+/*#region activity countries selection*/
+
+.activity_country_option_letter{
+    text-align: center;
+}
+
+.selected_countries > div{
+    max-width: 330px;
+    max-height: 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    overflow: auto;
+}
+
+.selected_country_item{
+    background-color: gainsboro;
+    border: 1px solid gray;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 3px;
+}
+
+.selected_country_item button{
+    border: 1px solid dimgray;
+    padding: 0 5px 2px;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-weight: bold;
+    color: dimgray;
+    cursor: pointer;
+}
+
+.selected_country_item button:hover{
+    background-color: silver;
+    color: white;
+}
+
+.selected_country_item button:active{
+    background-color: dimgray;
+    color: white;
+}
+
+/*#endregion*/
+
+/*#region activity duration*/
+.activity_duration {
+    display: grid;
+    grid-template-columns: 80px 1fr 40px;
+}
+
+.duration_time_info{
+    text-align: right;
+}
+/*#endregion*/
+
+/*#region activity difficulty*/
+.activity_difficulty{
+    display: grid;
+    grid-template-columns: 1fr 40px;
+}
+
+.activity_difficulty span{
+    text-align: right;
+}
+/*#endregion*/
+
+/*#region activity create button*/
+.activity_create_button {
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(150, 150, 150);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    height: max-content;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.activity_create_button:disabled{
+    background-color: transparent;
+    color: silver;
+    border: 1px solid silver;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.activity_create_button:not([disabled]):hover {
+    border: 1px solid rgb(85, 85, 85);
+    background-color: rgb(125, 125, 125);
+}
+
+.activity_create_button:not([disabled]):active {
+    border: 1px solid rgb(50, 50, 50);
+    background-color: rgb(100, 100, 100);
+}
+/*#endregion*/
+
+.error_label{
+    display: block;
+    color: salmon;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .activity_designer_form {
+        min-width: 300px;
+        max-width: 300px;
+        margin-top: 30px;
+    }
+}

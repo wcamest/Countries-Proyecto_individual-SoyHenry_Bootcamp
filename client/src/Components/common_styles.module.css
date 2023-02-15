@@ -1,0 +1,30 @@
+.button{
+    text-decoration: none;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(150, 150, 150);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    height: max-content;
+    margin-left: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+.button:not([disabled]):hover{
+    border: 1px solid rgb(85, 85, 85);
+    background-color: rgb(125, 125, 125);
+}
+
+.button:not([disabled]):active{
+    border: 1px solid rgb(50, 50, 50);
+    background-color: rgb(100, 100, 100);
+}
+
+.button:disabled{
+    background-color: transparent;
+    color: silver;
+    border: 1px solid silver;
+    box-shadow: none;
+    cursor: not-allowed;
+}
