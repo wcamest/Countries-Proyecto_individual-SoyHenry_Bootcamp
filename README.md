@@ -24,4 +24,4 @@ Las tecnologías utilizadas en este proyecto incluyen:
 Espero que disfrutes navegando por la página y aprendiendo más sobre los países del mundo. Si tienes alguna pregunta o comentario, no dudes en contactarme. ¡Gracias por utilizar "Countries"!
 
 ## Deployment
-https://countries-app.williamceo.com/
+https://countries.williamceo.com/
